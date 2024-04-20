@@ -1,0 +1,82 @@
+==============================================================================
+2024-04-20 15:12:08.636953 - INFO - + START SUITE: Swat Midterm
+==============================================================================
+2024-04-20 15:12:08.655104 - INFO - +- START SUITE: Swat Midterm.Tests
+==============================================================================
+2024-04-20 15:12:08.656736 - INFO - +-- START SUITE: Swat Midterm.Tests.Authentication
+==============================================================================
+2024-04-20 15:12:08.657675 - INFO - +--- START SUITE: Swat Midterm.Tests.Authentication.Login
+==============================================================================
+2024-04-20 15:12:08.833530 - INFO - +---- START TEST: TC3:
+------------------------------------------------------------------------------
+2024-04-20 15:12:08.834317 - INFO - +----- START KEYWORD: resources.Open Browser And Go To Login [ ]
+2024-04-20 15:12:08.834317 - INFO - +------ START KEYWORD: resources.Open Browser To Katalon Demo CURA [ ]
+2024-04-20 15:12:08.835317 - INFO - +------- START KEYWORD: SeleniumLibrary.Open Browser [ ${URL} | ${BROWSER} ]
+2024-04-20 15:12:08.835317 - INFO - Opening browser 'chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.
+2024-04-20 15:12:45.690265 - DEBUG - Opened browser with session id 2a967cdc9158783b0fd741325bcade04.
+2024-04-20 15:12:45.690265 - INFO - +------- END KEYWORD: SeleniumLibrary.Open Browser (36.854948 s)
+2024-04-20 15:12:45.690265 - INFO - +------- START KEYWORD: SeleniumLibrary.Maximize Browser Window [ ]
+2024-04-20 15:12:45.811640 - INFO - +------- END KEYWORD: SeleniumLibrary.Maximize Browser Window (0.121375 s)
+2024-04-20 15:12:45.813269 - INFO - +------ END KEYWORD: resources.Open Browser To Katalon Demo CURA (36.978952 s)
+2024-04-20 15:12:45.813269 - INFO - +------ START KEYWORD: SeleniumLibrary.Click Element [ xpath://*[@id="menu-toggle"] ]
+2024-04-20 15:12:45.814206 - INFO - Clicking element 'xpath://*[@id="menu-toggle"]'.
+2024-04-20 15:12:45.867896 - INFO - +------ END KEYWORD: SeleniumLibrary.Click Element (0.054627 s)
+2024-04-20 15:12:45.867896 - INFO - +------ START KEYWORD: BuiltIn.Sleep [ 2 ]
+2024-04-20 15:12:47.868125 - INFO - Slept 2 seconds.
+2024-04-20 15:12:47.868670 - INFO - +------ END KEYWORD: BuiltIn.Sleep (2.000774 s)
+2024-04-20 15:12:47.868670 - INFO - +------ START KEYWORD: SeleniumLibrary.Click Element [ xpath://*[@id="sidebar-wrapper"]/ul/li[3]/a ]
+2024-04-20 15:12:47.869674 - INFO - Clicking element 'xpath://*[@id="sidebar-wrapper"]/ul/li[3]/a'.
+2024-04-20 15:12:48.967921 - INFO - +------ END KEYWORD: SeleniumLibrary.Click Element (1.099251 s)
+2024-04-20 15:12:48.968918 - INFO - +------ START KEYWORD: SeleniumLibrary.Wait Until Element Is Visible [ xpath://*[@id="login"]/div/div/div[2]/form/div[1] ]
+2024-04-20 15:12:48.991929 - INFO - +------ END KEYWORD: SeleniumLibrary.Wait Until Element Is Visible (0.023011 s)
+2024-04-20 15:12:48.992934 - INFO - +----- END KEYWORD: resources.Open Browser And Go To Login (40.158617 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-04-20 15:12:48.992934 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id:txt-username | John Doe ]
+2024-04-20 15:12:48.992934 - INFO - Typing text 'John Doe' into text field 'id:txt-username'.
+2024-04-20 15:12:49.071224 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (0.07829 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-04-20 15:12:49.071224 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 1 ]
+2024-04-20 15:12:50.073261 - INFO - Slept 1 second.
+2024-04-20 15:12:50.074282 - INFO - +----- END KEYWORD: BuiltIn.Sleep (1.003058 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-04-20 15:12:50.074282 - INFO - +----- START KEYWORD: SeleniumLibrary.Input Text [ id:txt-password | huan123 ]
+2024-04-20 15:12:50.075282 - INFO - Typing text 'huan123' into text field 'id:txt-password'.
+2024-04-20 15:12:50.148905 - INFO - +----- END KEYWORD: SeleniumLibrary.Input Text (0.074623 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-04-20 15:12:50.148905 - INFO - +----- START KEYWORD: BuiltIn.Sleep [ 1 ]
+2024-04-20 15:12:51.150200 - INFO - Slept 1 second.
+2024-04-20 15:12:51.153867 - INFO - +----- END KEYWORD: BuiltIn.Sleep (1.004962 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-04-20 15:12:51.154865 - INFO - +----- START KEYWORD: SeleniumLibrary.Click Element [ id:btn-login ]
+2024-04-20 15:12:51.155817 - INFO - Clicking element 'id:btn-login'.
+2024-04-20 15:12:53.511608 - INFO - +----- END KEYWORD: SeleniumLibrary.Click Element (2.356743 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-04-20 15:12:53.511608 - INFO - +----- START KEYWORD: resources.Verify the URL [ https://katalon-demo-cura.herokuapp.com/profile.php#login ]
+2024-04-20 15:12:53.511608 - INFO - +------ START KEYWORD: SeleniumLibrary.Get Location [ ]
+2024-04-20 15:12:53.519141 - INFO - ${current_url} = https://katalon-demo-cura.herokuapp.com/profile.php#login
+2024-04-20 15:12:53.521158 - INFO - +------ END KEYWORD: SeleniumLibrary.Get Location (0.00955 s)
+2024-04-20 15:12:53.522786 - INFO - +------ START KEYWORD: BuiltIn.Should Be Equal As Strings [ ${current_url} | ${URL} ]
+2024-04-20 15:12:53.522786 - DEBUG - Argument types are:
+<class 'str'>
+<class 'str'>
+2024-04-20 15:12:53.523693 - INFO - +------ END KEYWORD: BuiltIn.Should Be Equal As Strings (0.000907 s)
+2024-04-20 15:12:53.523693 - INFO - +----- END KEYWORD: resources.Verify the URL (0.012085 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-04-20 15:12:53.523693 - INFO - +----- START KEYWORD: SeleniumLibrary.Element Should Be Visible [ xpath://*[@id="login"]/div/div/div[1]/p[2] ]
+2024-04-20 15:12:53.546830 - INFO - Element 'xpath://*[@id="login"]/div/div/div[1]/p[2]' is displayed.
+2024-04-20 15:12:53.547822 - INFO - +----- END KEYWORD: SeleniumLibrary.Element Should Be Visible (0.024129 s)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2024-04-20 15:12:53.548821 - INFO - +----- START KEYWORD: SeleniumLibrary.Element Text Should Be [ xpath://*[@id="login"]/div/div/div[1]/p[2] | Login failed! Please ensure the username and password are valid. ]
+2024-04-20 15:12:53.548821 - INFO - Verifying element 'xpath://*[@id="login"]/div/div/div[1]/p[2]' contains exact text 'Login failed! Please ensure the username and password are valid.'.
+2024-04-20 15:12:53.571062 - INFO - +----- END KEYWORD: SeleniumLibrary.Element Text Should Be (0.022241 s)
+------------------------------------------------------------------------------
+2024-04-20 15:12:53.572062 - INFO - +---- END TEST: TC3: (44.738532 s)
+------------------------------------------------------------------------------
+2024-04-20 15:12:53.572062 - INFO - +--- END SUITE: Swat Midterm.Tests.Authentication.Login (44.914387 s)
+==============================================================================
+2024-04-20 15:12:53.573062 - INFO - +-- END SUITE: Swat Midterm.Tests.Authentication (44.916326 s)
+==============================================================================
+2024-04-20 15:12:53.574436 - INFO - +- END SUITE: Swat Midterm.Tests (44.919332 s)
+==============================================================================
+2024-04-20 15:12:53.575437 - INFO - + END SUITE: Swat Midterm (44.938484 s)
+==============================================================================

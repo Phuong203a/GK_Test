@@ -1,0 +1,71 @@
+command: robot -A C:\Users\KHANHH~1\AppData\Local\Temp\RIDE5wfhdwi2.d\argfile.txt --listener "C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py:65443:False" "D:\Học tập\Class\Autotesting\Midterm\swat_midterm"
+
+TestRunnerAgent: Running under CPython 3.12.1
+
+===================================================================
+Swat Midterm                                                       
+===================================================================
+Swat Midterm.Tests                                                 
+===================================================================
+Swat Midterm.Tests.Authentication                                  
+===================================================================
+
+Swat Midterm.Tests.Authentication.Login                            
+===================================================================
+
+
+
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+
+
+
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+
+
+
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+
+
+
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+
+
+
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+
+
+
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+
+
+
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+[ ERROR ] Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'
+
+TC3: :: Case wwrong password                               | PASS |
+-------------------------------------------------------------------
+Swat Midterm.Tests.Authentication.Login                    | PASS |
+1 test, 1 passed, 0 failed
+===================================================================
+Swat Midterm.Tests.Authentication                          | PASS |
+1 test, 1 passed, 0 failed
+===================================================================
+Swat Midterm.Tests                                         | PASS |
+1 test, 1 passed, 0 failed
+===================================================================
+Swat Midterm                                               | PASS |
+1 test, 1 passed, 0 failed
+===================================================================
+Debug:   D:\Học tập\Class\Autotesting\Midterm\swat_midterm\Output\Login\Swat Midterm-Message-20240420-151208.log
+Output:  D:\Học tập\Class\Autotesting\Midterm\swat_midterm\Output\Login\Swat Midterm-Output-20240420-151208.xml
+Log:     D:\Học tập\Class\Autotesting\Midterm\swat_midterm\Output\Login\Swat Midterm-Log-20240420-151208.html
+
+Report:  D:\Học tập\Class\Autotesting\Midterm\swat_midterm\Output\Login\Swat Midterm-Report-20240420-151208.html
+
+
+
+Test finished 20240420 15:12:55

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-04-20T15:11:11.001318" rpa="false" schemaversion="5">
+<suite id="s1" name="Swat Midterm" source="D:\Học tập\Class\Autotesting\Midterm\swat_midterm">
+<suite id="s1-s1" name="Tests" source="D:\Học tập\Class\Autotesting\Midterm\swat_midterm\Tests">
+<suite id="s1-s1-s1" name="Authentication" source="D:\Học tập\Class\Autotesting\Midterm\swat_midterm\Tests\Authentication">
+<suite id="s1-s1-s1-s1" name="Login" source="D:\Học tập\Class\Autotesting\Midterm\swat_midterm\Tests\Authentication\login.robot">
+<test id="s1-s1-s1-s1-t1" name="TC3:" line="31">
+<kw name="Open Browser And Go To Login" owner="resources">
+<kw name="Open Browser To Katalon Demo CURA" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-20T15:11:11.224317" level="INFO">Opening browser 'chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-20T15:11:11.223319" elapsed="30.280547"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-20T15:11:41.504868" elapsed="0.120100"/>
+</kw>
+<status status="PASS" start="2024-04-20T15:11:11.223319" elapsed="30.402651"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-20T15:11:41.625970" level="INFO">Clicking element 'xpath://*[@id="menu-toggle"]'.</msg>
+<arg>xpath://*[@id="menu-toggle"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-20T15:11:41.625970" elapsed="0.056245"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-20T15:11:43.682828" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-20T15:11:41.682215" elapsed="2.001619"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-20T15:11:43.683834" level="INFO">Clicking element 'xpath://*[@id="sidebar-wrapper"]/ul/li[3]/a'.</msg>
+<arg>xpath://*[@id="sidebar-wrapper"]/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-20T15:11:43.683834" elapsed="1.039728"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="login"]/div/div/div[2]/form/div[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-20T15:11:44.723562" elapsed="0.020038"/>
+</kw>
+<status status="PASS" start="2024-04-20T15:11:11.222291" elapsed="33.521309"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-20T15:11:44.743600" level="INFO">Typing text 'John Doe' into text field 'id:txt-username'.</msg>
+<arg>id:txt-username</arg>
+<arg>John Doe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-20T15:11:44.743600" elapsed="0.120576"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-20T15:11:45.865746" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-20T15:11:44.864176" elapsed="1.002577"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-20T15:11:45.866753" level="INFO">Typing text 'huan123' into text field 'id:txt-password'.</msg>
+<arg>id:txt-password</arg>
+<arg>huan123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-20T15:11:45.866753" elapsed="0.063175"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-20T15:11:46.931156" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-20T15:11:45.930934" elapsed="1.001295"/>
+</kw>
+<kw name="Verify the URL" owner="resources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-20T15:11:46.937230" level="INFO">${current_url} = https://katalon-demo-cura.herokuapp.com/profile.php#login</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-20T15:11:46.933231" elapsed="0.005001"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-20T15:11:46.939232" elapsed="0.000000"/>
+</kw>
+<arg>https://katalon-demo-cura.herokuapp.com/profile.php#login</arg>
+<status status="PASS" start="2024-04-20T15:11:46.933231" elapsed="0.006001"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-20T15:11:47.055117" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-20T15:11:47.057111" level="FAIL">Element with locator 'xpath://*[@id="login"]/div/div/div[1]/p[2]' not found.</msg>
+<arg>xpath://*[@id="login"]/div/div/div[1]/p[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-04-20T15:11:46.939232" elapsed="0.119878">Element with locator 'xpath://*[@id="login"]/div/div/div[1]/p[2]' not found.</status>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>xpath://*[@id="login"]/div/div/div[1]/p[2]</arg>
+<arg>Login failed! Please ensure the username and password are valid.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2024-04-20T15:11:47.060111" elapsed="0.000000"/>
+</kw>
+<doc>Case wwrong password</doc>
+<status status="FAIL" start="2024-04-20T15:11:11.222291" elapsed="35.838323">Element with locator 'xpath://*[@id="login"]/div/div/div[1]/p[2]' not found.</status>
+</test>
+<status status="FAIL" start="2024-04-20T15:11:11.039101" elapsed="36.021513"/>
+</suite>
+<status status="FAIL" start="2024-04-20T15:11:11.037101" elapsed="36.024521"/>
+</suite>
+<status status="FAIL" start="2024-04-20T15:11:11.036102" elapsed="36.026517"/>
+</suite>
+<status status="FAIL" start="2024-04-20T15:11:11.018072" elapsed="36.044547"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Swat Midterm">Swat Midterm</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Swat Midterm.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Authentication">Swat Midterm.Tests.Authentication</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Login">Swat Midterm.Tests.Authentication.Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-20T15:11:11.225284" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:41.626968" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:43.682828" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:43.684835" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:44.744601" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:45.866753" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:45.867753" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:46.932229" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:46.938232" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:47.057111" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+<msg time="2024-04-20T15:11:47.059110" level="ERROR">Calling method 'log_message' of listener 'C:\Users\KHANH HUAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\robotide\contrib\testrunner\TestRunnerAgent.py' failed: AttributeError: 'Output' object has no attribute '_xmllogger'</msg>
+</errors>
+</robot>
