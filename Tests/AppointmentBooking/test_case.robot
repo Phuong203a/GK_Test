@@ -1,10 +1,11 @@
 *** Settings ***
+Suite Setup       Open Browser and login
+Test Setup        Check Session And Login If Needed
 Resource          ../../Resources/resources.robot
 
 *** Test Cases ***
 Testcase 01
     [Documentation]    Verify the first time accessing
-    Open Browser and login
     List Selection Should Be    xpath://*[@id="combo_facility"]    Tokyo CURA Healthcare Center
     Checkbox Should Not Be Selected    id:chk_hospotal_readmission
     Radio Button Should Be Set To    programs    Medicare
@@ -14,10 +15,10 @@ Testcase 01
     Should Be Empty    ${comment}
     Verify Placeholders    dd/mm/yyyy    xpath://*[@id="txt_visit_date"]
     Verify Placeholders    Comment    id:txt_comment
+    Sleep    3
 
 Testcase 02
     [Documentation]    Fill full the information
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -37,11 +38,13 @@ Testcase 02
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
     Sleep    3
-    Close Browser
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
 
 Testcase 03
     [Documentation]    Fill in all information except check box
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     ${checkbox_status}=    Run Keyword And Return Status    Checkbox Should Not Be Selected    id:chk_hospotal_readmission
@@ -60,11 +63,14 @@ Testcase 03
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
     Sleep    3
-    Close Browser
+    Go to History
+    Sleep    3
+
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
 
 Testcase 04
     [Documentation]    In the date field, enter the date using text
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -84,11 +90,13 @@ Testcase 04
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${current_date}    ${comment}
     Sleep    3
-    Close Browser
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${current_date}    ${comment}
 
 Testcase 05
     [Documentation]    In the date field, enter the date in the past
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -107,11 +115,13 @@ Testcase 05
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
     Sleep    3
-    Close Browser
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
 
 Testcase 06
     [Documentation]    In the date field, enter an out of range date
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -129,11 +139,13 @@ Testcase 06
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    02/05/2024    ${comment}
     Sleep    3
-    Close Browser
-
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    02/05/2024    ${comment}
+    
 Testcase 07
     [Documentation]    In the date field, enter the date with special characters
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -152,11 +164,13 @@ Testcase 07
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${current_date}    ${comment}
     Sleep    3
-    Close Browser
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${current_date}    ${comment}
 
 Testcase 08
     [Documentation]    In the date field, enter the date with a negative number
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -176,11 +190,13 @@ Testcase 08
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${new_date}    ${comment}
     Sleep    3
-    Close Browser    
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${new_date}    ${comment}
 
 Testcase 09
     [Documentation]    In the date field, enter the date with decimal numbers
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -199,11 +215,13 @@ Testcase 09
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${current_date}    ${comment}
     Sleep    3
-    Close Browser  
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${current_date}    ${comment}
 
 Testcase 10
     [Documentation]    In the date field, not enter the date
-    Open Browser and login 
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -218,10 +236,8 @@ Testcase 10
     ${error_message}=    Execute JavaScript    return document.getElementById('txt_visit_date').validationMessage;
     Should Be Equal    ${error_message}    Please fill out this field.
 
-
 Testcase 11
     [Documentation]    In the comment field, no enter the comment
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -238,11 +254,13 @@ Testcase 11
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${date}    ${EMPTY}
     Sleep    3
-    Close Browser
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${date}    ${EMPTY}
 
 Testcase 12
     [Documentation]    The case where the user intentionally opens the dev tool to remove the required attribute
-    Open Browser and login
     ${facility}    Set Variable    Tokyo CURA Healthcare Center
     Select From List By Value    xpath://*[@id="combo_facility"]    ${facility}
     Select Checkbox    xpath://*[@id="chk_hospotal_readmission"]
@@ -259,4 +277,7 @@ Testcase 12
     Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
     Verify information of booking    ${facility}    ${checkbox}    ${program}    ${EMPTY}    ${comment}
     Sleep    3
-    Close Browser        
+    Go to History
+    Sleep    3
+    Scroll Down Slowly
+    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${EMPTY}    ${comment}
