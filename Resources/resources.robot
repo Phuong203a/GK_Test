@@ -6,6 +6,7 @@ Library           String
 Library           DateTime
 Library           SSHLibrary
 Library           OperatingSystem
+Library           RequestsLibrary
 
 *** Variables ***
 ${URL}            https://katalon-demo-cura.herokuapp.com/
@@ -14,8 +15,8 @@ ${SESSION_ID}     ${EMPTY}
 
 *** Keywords ***
 
-# **********************************************************************************************************************
-# For the demo Booking and History 
+    # **********************************************************************************************************************
+    # For the demo Booking and History
 
 Open Browser To Katalon Demo CURA
     Open Browser    ${URL}    ${BROWSER}
@@ -58,13 +59,12 @@ Verify Last Panel Info
     Wait Until Element Is Visible    ${last_panel_xpath}    timeout=10s
     ${last_panel}=    Get WebElements    ${last_panel_xpath}
     Log    Last Panel Elements: ${last_panel}
-
     ${panel_info}=    Set Variable    ${EMPTY}
-    Run Keyword If    '${last_panel}' != '${EMPTY}'    Get Panel Info    ${last_panel}   ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
+    Run Keyword If    '${last_panel}' != '${EMPTY}'    Get Panel Info    ${last_panel} ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
     ...    ELSE    Log    Last panel element not found
 
 Get Panel Info
-    [Arguments]    ${last_panel}    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}        
+    [Arguments]    ${last_panel}    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
     ${panel_info}=    Get Text    ${last_panel}[0]
     Log    Last Panel Info: ${panel_info}
     ${panel_list}=    Split String    ${panel_info}    \n
@@ -77,17 +77,15 @@ Get Panel Info
     Should Be Equal As Strings    ${comment}    ${panel_list}[8]
     Should Be Equal As Strings    ${date}    ${panel_list}[0]
 
-
-
 Verify the URL
     [Arguments]    ${URL}
     ${current_url} =    Get Location
     Should Be Equal As Strings    ${current_url}    ${URL}
 
-
-
 Check Session And Login If Needed
-   ${current_session_id}=    Get Session Id
+
+${current_session_id}=
+    Get Session Id
     IF    '${current_session_id}' == 'None'
         Open Browser and login
     ELSE
@@ -122,6 +120,7 @@ Scroll Down Slowly
         Execute JavaScript    window.scrollTo(0, ${i});
         Sleep    ${scroll_speed}
     END
+
 Get List Of Dates
     @{dates_elements}=    Get WebElements    class:panel-heading
     Log To Console    ${dates_elements}
@@ -130,13 +129,10 @@ Get List Of Dates
         ${date}=    Get Text    ${element}
         Append To List    ${dates_text}    ${date}
     END
+    # **********************************************************************************************************************
+    # For the demo Authentication
     [Return]    ${dates_text}
 
-
-
-
-# **********************************************************************************************************************
-# For the demo Authentication
 Invalid account
     Verify the URL    https://katalon-demo-cura.herokuapp.com/profile.php#login
     Element Should Be Visible    xpath://*[@id="login"]/div/div/div[1]/p[2]
