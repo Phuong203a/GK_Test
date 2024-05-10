@@ -155,6 +155,7 @@ TC16
     [Documentation]    Case User attemp XSS attack in username field
     Open Browser And Go To Login
     Input Username and Password    <script>alert('XSS attack detected');</script>    ThisIsNotAPassword
+    Alert Should Not Be Present
     Invalid account
     Close Browser
 
@@ -162,6 +163,7 @@ TC17:
     [Documentation]    Case User attemp XSS attack in password field
     Open Browser And Go To Login
     Input Username and Password    John Doe    <script>alert('XSS attack detected');</script>
+    Alert Should Not Be Present
     Invalid account
     Close Browser
 
