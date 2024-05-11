@@ -111,14 +111,16 @@ Testcase 05
     ${comment}    Set Variable    This is a comment
     Input Text    id:txt_comment    ${comment}
     Click Element    id:btn-book-appointment
-    Wait Until Element Is Visible    xpath://*[@id="summary"]/div/div/div[1]/h2
-    Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
-    Verify information of booking    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
-    Sleep    3
-    Go to History
-    Sleep    3
-    Scroll Down Slowly
-    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
+    Fail    The date is in the past
+    # Wait Until Element Is Visible    xpath://*[@id="summary"]/div/div/div[1]/h2
+    # Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
+    # Verify information of booking    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
+    # Sleep    3
+    # Go to History
+    # Sleep    3
+    # Scroll Down Slowly
+    # Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
+    
 
 Testcase 06
     [Documentation]    In the date field, enter an out of range date
@@ -273,11 +275,13 @@ Testcase 12
     ${comment}    Set Variable    This is a comment
     Input Text    id:txt_comment    ${comment}
     Click Element    id:btn-book-appointment
-    Wait Until Element Is Visible    xpath://*[@id="summary"]/div/div/div[1]/h2
-    Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
-    Verify information of booking    ${facility}    ${checkbox}    ${program}    ${EMPTY}    ${comment}
-    Sleep    3
-    Go to History
-    Sleep    3
-    Scroll Down Slowly
-    Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${EMPTY}    ${comment}
+    Fail    The date field is required
+    # Wait Until Element Is Visible    xpath://*[@id="summary"]/div/div/div[1]/h2
+    # Verify the URL    https://katalon-demo-cura.herokuapp.com/appointment.php#summary
+    # Verify information of booking    ${facility}    ${checkbox}    ${program}    ${EMPTY}    ${comment}
+    # Sleep    3
+    # Go to History
+    # Sleep    3
+    # Scroll Down Slowly
+    # Verify Last Panel Info    ${facility}    ${checkbox}    ${program}    ${EMPTY}    ${comment}
+    

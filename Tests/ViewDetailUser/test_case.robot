@@ -32,10 +32,10 @@ Testcase 03
     Sleep    5
     Click Element    xpath://*[@id="menu-toggle"]
     Click Element    xpath://*[@id="sidebar-wrapper"]/ul/li[4]/a
+    Sleep    3
     Wait Until Element Is Visible    xpath://*[@id="profile"]/div/div/div/h2
     Page Should Contain    Under construction.
     Page Should Contain Link    xpath://*[@id="profile"]/div/div/div/p[2]/a
-
-
-
+    Fail    Application does not support this feature yet, information is not visible.
+    
     

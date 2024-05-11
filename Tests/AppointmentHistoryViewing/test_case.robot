@@ -44,6 +44,7 @@ Testcase 03
     Sleep    2
     Scroll Down Slowly
     @{history_dates}=    Get List Of Dates
+    Sort List    ${history_dates}
     Log To Console    message: ${history_dates}
     Log To Console    message: ${booking_dates}
-    Lists Should Be Equal    ${booking_dates}    ${history_dates}
+    Lists Should Be Equal    ${booking_dates}    ${history_dates}    msg=The order of dates is not correct

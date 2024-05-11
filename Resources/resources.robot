@@ -60,7 +60,7 @@ Verify Last Panel Info
     ${last_panel}=    Get WebElements    ${last_panel_xpath}
     Log    Last Panel Elements: ${last_panel}
     ${panel_info}=    Set Variable    ${EMPTY}
-    Run Keyword If    '${last_panel}' != '${EMPTY}'    Get Panel Info    ${last_panel} ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
+    Run Keyword If    '${last_panel}' != '${EMPTY}'    Get Panel Info    ${last_panel}    ${facility}    ${checkbox}    ${program}    ${date}    ${comment}
     ...    ELSE    Log    Last panel element not found
 
 Get Panel Info
@@ -83,9 +83,7 @@ Verify the URL
     Should Be Equal As Strings    ${current_url}    ${URL}
 
 Check Session And Login If Needed
-
-${current_session_id}=
-    Get Session Id
+    ${current_session_id}=    Get Session Id
     IF    '${current_session_id}' == 'None'
         Open Browser and login
     ELSE
